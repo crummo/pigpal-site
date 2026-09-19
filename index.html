@@ -48,6 +48,10 @@
          box-shadow:0 8px 24px rgba(224,104,140,.35); }
   .cta.ghost { background:transparent; color:var(--ink2); box-shadow:none; font-weight:500; }
   .soon { color:var(--ink3); font-size:.95rem; margin-top:14px; }
+  /* Said in the hero, not only in the section near the bottom. For most people the site is the
+     first thing they ever see of Pig Pal, and three screenshots of dollar balances will leave an
+     impression whether or not they scroll far enough to find the correction. */
+  .clarify { color:var(--ink3); font-size:.95rem; margin:-12px auto 26px; max-width:30rem; }
 
   /* Shots */
   .shots { display:grid; gap:26px; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));
@@ -87,6 +91,8 @@
     <h1>The piggy bank,<br>all grown up.</h1>
     <p class="tag">Chores, allowance, and goals — in one happy little app.<br>
       For iPhone and iPad.</p>
+    <p class="clarify">A tracker, not a bank — <a href="#money">parents hand over the real
+      money</a>.</p>
     <a class="cta" href="#features">See how it works</a>
     <p class="soon">Coming to the App Store.</p>
   </header>
@@ -144,12 +150,16 @@
     </ul>
   </section>
 
-  <section>
+  <section id="money">
     <h2>Not a bank</h2>
     <div class="privacy">
-      <p><strong>Pig Pal keeps score.</strong> It doesn't hold money, move money, or connect to a
-        bank, and there's no card. A balance in Pig Pal is a note of what a grown-up has decided
-        they owe — the real money changes hands the way it always did.</p>
+      <p><strong>Pig Pal is a tracker, not a bank.</strong> It doesn't hold money, move money,
+        connect to an account, or issue a card.</p>
+      <p>When a chore is approved or allowance lands, nothing happens in the world — a number in
+        the app goes up. <strong>The real money is handed over by the parent</strong>, whenever and
+        however they already do it: cash, a transfer, a trip to the shop.</p>
+      <p>A balance here is a shared record of what a grown-up has decided they owe, so the two of
+        you stop arguing about what was agreed three weeks ago.</p>
     </div>
   </section>
 
