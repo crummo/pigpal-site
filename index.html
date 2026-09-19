@@ -6,6 +6,8 @@
 <title>Pig Pal — the piggy bank, all grown up</title>
 <meta name="description" content="Chores, allowance and savings goals for families. Kids see what they've earned, parents approve from their own phone, and it syncs privately between both parents.">
 <link rel="canonical" href="https://pigpal.app/">
+<link rel="icon" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
 <meta property="og:title" content="Pig Pal — the piggy bank, all grown up">
 <meta property="og:description" content="Chores, allowance and savings goals for families. One happy little app for iPhone and iPad.">
 <meta property="og:type" content="website">
@@ -37,7 +39,8 @@
 
   /* Hero */
   header { padding:72px 0 8px; text-align:center; }
-  .mark { font-size:56px; line-height:1; }
+  .mark { width:96px; height:96px; border-radius:22px; display:block; margin:0 auto;
+          box-shadow:0 10px 30px rgba(0,0,0,.16); }
   h1 { font-size:clamp(2.4rem,7vw,3.6rem); line-height:1.05; letter-spacing:-.03em; margin:14px 0 12px; }
   .tag { font-size:clamp(1.05rem,2.6vw,1.3rem); color:var(--ink2); margin:0 auto 28px; max-width:34rem; }
   .cta { display:inline-block; background:var(--pink); color:#fff; text-decoration:none;
@@ -80,10 +83,10 @@
 <div class="wrap">
 
   <header>
-    <div class="mark">🐷</div>
+    <img class="mark" src="assets/icon.png" alt="The Pig Pal app icon">
     <h1>The piggy bank,<br>all grown up.</h1>
-    <p class="tag">Chores, allowance and savings goals for families — in one happy little app
-      for iPhone and iPad.</p>
+    <p class="tag">Chores, allowance, and goals — in one happy little app.
+      For iPhone and iPad.</p>
     <a class="cta" href="#features">See how it works</a>
     <p class="soon">Coming to the App Store.</p>
   </header>
@@ -105,18 +108,18 @@
 
   <section id="features">
     <h2>Money that means something</h2>
-    <p class="lede">Pig Pal is the chore chart on the fridge and the jar on the shelf, kept honest
-      by a ledger that can't be fudged and a parent who approves every penny.</p>
+    <p class="lede">The chore chart on the fridge and the jar on the shelf — kept honest by a
+      ledger that can't be fudged, and a parent who approves every penny.</p>
     <ul class="grid">
-      <li><b>Chores that pay</b><span>A kid ticks it off, a parent approves, the money lands — and
-        the streak keeps going.</span></li>
-      <li><b>Allowance on a schedule</b><span>Set it once. It arrives every week even if nobody
-        opens the app.</span></li>
-      <li><b>Goals worth saving for</b><span>Kids split their allowance toward the thing they
-        actually want, and watch it fill.</span></li>
-      <li><b>Rewards that aren't money</b><span>A day out for a month of chores — together, or
-        each on their own.</span></li>
-      <li><b>Both parents, in step</b><span>Private iCloud sync. Approve on your phone, and it's
+      <li><b>Chores that pay</b><span>Kids check things off the list and earn real dollars. You
+        approve, the money lands.</span></li>
+      <li><b>Weekly allowance, automatic</b><span>Pick an amount and a day. Pig Pal drops it in
+        their balance without you lifting a finger.</span></li>
+      <li><b>Goals worth saving for</b><span>Set a target — a new toy, a game, a bike. Watch the
+        balance fill the bar.</span></li>
+      <li><b>Rewards that aren't money</b><span>A day out for a month of chores. Pooled between
+        them, or each on their own.</span></li>
+      <li><b>Both parents, in step</b><span>Private iCloud sync. Approve on your phone and it's
         already done on theirs.</span></li>
       <li><b>A device each, or one to share</b><span>Hand a kid a phone and it opens to their
         screen and nowhere else. The family iPad asks who's here.</span></li>

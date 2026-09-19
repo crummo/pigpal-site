@@ -51,6 +51,14 @@ Screenshots live in `assets/` and are regenerated from the simulator, not mocked
 > **Must-haves for the App Store listing to be valid:** a working privacy policy page, a support
 > contact, and an `og:image` so shared links preview properly.
 >
+> **Copy comes from the app, not from imagination.** The headline and the first three feature
+> cards are the app's own onboarding text, word for word — "Kids check things off the list and
+> earn real dollars. You approve, the money lands." Keep them identical: someone who sees the site
+> and then opens the app should read the same sentences. New copy goes in that voice.
+>
+> **Use the real app icon** (`assets/icon.png`, from the asset catalog) in the hero, as the
+> favicon and as the Apple touch icon. Never an emoji stand-in.
+>
 > **Assets:** `assets/shot-kid.png`, `assets/shot-parent.png`, `assets/shot-gate.png`,
 > `assets/shot-rewards.png` — real screenshots at 620px wide. Use the kid screen as the hero and
 > the social preview image.
