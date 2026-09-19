@@ -4,55 +4,143 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pig Pal — the piggy bank, all grown up</title>
-<meta name="description" content="Chores, allowance and savings goals for families, in one happy little app for iPhone and iPad.">
+<meta name="description" content="Chores, allowance and savings goals for families. Kids see what they've earned, parents approve from their own phone, and it syncs privately between both parents.">
+<link rel="canonical" href="https://pigpal.app/">
+<meta property="og:title" content="Pig Pal — the piggy bank, all grown up">
+<meta property="og:description" content="Chores, allowance and savings goals for families. One happy little app for iPhone and iPad.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pigpal.app/">
+<meta property="og:image" content="https://pigpal.app/assets/shot-kid.png">
+<meta name="twitter:card" content="summary_large_image">
 <style>
-  :root { --ink:#2b1b20; --ink2:#6b5158; --ink3:#93777f; --bg:#fdf0f2; --card:#fff7f8; --pink:#c8466b; }
-  @media (prefers-color-scheme: dark) {
-    :root { --ink:#f6eaee; --ink2:#c5aab3; --ink3:#9b818a; --bg:#1a1114; --card:#241a1e; --pink:#f08fae; }
+  :root {
+    --ink:#2b1b20; --ink2:#6b5158; --ink3:#93777f;
+    --bg:#fdf0f2; --card:#fff7f8; --line:rgba(0,0,0,.06);
+    --pink:#e0688c; --pink-dark:#c8466b; --green:#3f9d6a;
   }
-  * { box-sizing: border-box; }
-  body { margin:0; padding:0 16px; background:var(--bg); color:var(--ink);
-         font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
-  main { max-width: 44rem; margin:0 auto; padding: 72px 0 80px; }
-  h1 { font-size: 2.4rem; line-height:1.1; margin:0 0 10px; letter-spacing:-.02em; }
-  .tag { font-size:1.15rem; color:var(--ink2); margin:0 0 40px; }
-  h2 { font-size:1.15rem; margin:44px 0 10px; }
-  p, li { color:var(--ink2); }
-  a { color:var(--pink); }
-  .grid { display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); margin:0; padding:0; list-style:none; }
-  .grid li { background:var(--card); border:1px solid rgba(0,0,0,.05); border-radius:16px; padding:18px 20px; }
-  .grid b { color:var(--ink); display:block; margin-bottom:2px; }
-  footer { margin-top:64px; padding-top:20px; border-top:1px solid rgba(0,0,0,.07); color:var(--ink3); font-size:.9rem; }
-  footer a { margin-right:18px; }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --ink:#f6eaee; --ink2:#c5aab3; --ink3:#9b818a;
+      --bg:#1a1114; --card:#241a1e; --line:rgba(255,255,255,.08);
+      --pink:#f08fae; --pink-dark:#f4a8c0;
+    }
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    margin:0; padding:0 16px; background:var(--bg); color:var(--ink);
+    font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:60rem; margin:0 auto; }
+  a { color:var(--pink-dark); }
+
+  /* Hero */
+  header { padding:72px 0 8px; text-align:center; }
+  .mark { font-size:56px; line-height:1; }
+  h1 { font-size:clamp(2.4rem,7vw,3.6rem); line-height:1.05; letter-spacing:-.03em; margin:14px 0 12px; }
+  .tag { font-size:clamp(1.05rem,2.6vw,1.3rem); color:var(--ink2); margin:0 auto 28px; max-width:34rem; }
+  .cta { display:inline-block; background:var(--pink); color:#fff; text-decoration:none;
+         font-weight:600; padding:14px 30px; border-radius:999px;
+         box-shadow:0 8px 24px rgba(224,104,140,.35); }
+  .cta.ghost { background:transparent; color:var(--ink2); box-shadow:none; font-weight:500; }
+  .soon { color:var(--ink3); font-size:.95rem; margin-top:14px; }
+
+  /* Shots */
+  .shots { display:grid; gap:26px; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));
+           margin:56px 0 8px; align-items:start; }
+  .shots figure { margin:0; text-align:center; }
+  .shots img { width:100%; max-width:310px; height:auto; border-radius:26px;
+               box-shadow:0 18px 50px rgba(0,0,0,.14); }
+  .shots figcaption { color:var(--ink3); font-size:.92rem; margin-top:12px; }
+
+  /* Features */
+  section { padding:64px 0; border-top:1px solid var(--line); margin-top:64px; }
+  h2 { font-size:clamp(1.6rem,4vw,2.1rem); line-height:1.15; letter-spacing:-.02em; margin:0 0 10px; }
+  .lede { color:var(--ink2); max-width:38rem; margin:0 0 32px; }
+  ul.grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));
+            list-style:none; margin:0; padding:0; }
+  ul.grid li { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:22px 24px; }
+  ul.grid b { display:block; color:var(--ink); margin-bottom:4px; font-size:1.05rem; }
+  ul.grid span { color:var(--ink2); font-size:.97rem; }
+
+  .privacy { background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px 30px; }
+  .privacy p { color:var(--ink2); margin:0 0 10px; }
+  .privacy p:last-child { margin:0; }
+  .privacy strong { color:var(--ink); }
+
+  footer { border-top:1px solid var(--line); margin-top:64px; padding:28px 0 64px;
+           color:var(--ink3); font-size:.92rem; display:flex; gap:20px; flex-wrap:wrap; }
+  footer a { color:var(--ink2); text-decoration:none; }
+  footer a:hover { color:var(--pink-dark); }
+  footer .spacer { flex:1; }
 </style>
 </head>
 <body>
-<main>
-  <h1>Pig Pal</h1>
-  <p class="tag">The piggy bank, all grown up. Chores, allowance and goals — in one happy little
-  app for iPhone and iPad.</p>
+<div class="wrap">
 
-  <ul class="grid">
-    <li><b>Chores that pay</b>A parent approves, the money lands, the streak keeps going.</li>
-    <li><b>Allowance on a schedule</b>Set it once and it arrives every week, even if nobody opens the app.</li>
-    <li><b>Goals worth saving for</b>Kids split their allowance toward the thing they actually want.</li>
-    <li><b>Rewards that aren't money</b>A day out for a month of chores, together or each.</li>
-    <li><b>Both parents, in step</b>Private iCloud sync between your family's devices.</li>
-    <li><b>A device each</b>Hand a kid a phone and it opens to their screen, and nowhere else.</li>
-  </ul>
+  <header>
+    <div class="mark">🐷</div>
+    <h1>The piggy bank,<br>all grown up.</h1>
+    <p class="tag">Chores, allowance and savings goals for families — in one happy little app
+      for iPhone and iPad.</p>
+    <a class="cta" href="#features">See how it works</a>
+    <p class="soon">Coming to the App Store.</p>
+  </header>
 
-  <h2>Support</h2>
-  <p>Something broken, or an idea? Email <a href="mailto:CONTACT@EXAMPLE.COM">CONTACT@EXAMPLE.COM</a>
-  and you'll get a reply from the person who wrote the app.</p>
+  <div class="shots">
+    <figure>
+      <img src="assets/shot-kid.png" alt="A child's screen in Pig Pal showing a $27.50 balance, a savings goal at 69%, and today's chores.">
+      <figcaption>What a kid sees: their money, their streak, today's chores.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/shot-parent.png" alt="The parent overview in Pig Pal showing three children with balances and quick plus and minus buttons.">
+      <figcaption>What a parent sees: everyone at a glance, approvals waiting.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/shot-gate.png" alt="The Pig Pal family picker asking Who's here? with a tile for each child.">
+      <figcaption>On the family iPad, everyone taps their own face.</figcaption>
+    </figure>
+  </div>
 
-  <h2>Privacy, in one line</h2>
-  <p>Pig Pal has no account and no server. Your family's data stays on your devices and in your own
-  iCloud — <a href="privacy.html">the full policy</a> is one short page.</p>
+  <section id="features">
+    <h2>Money that means something</h2>
+    <p class="lede">Pig Pal is the chore chart on the fridge and the jar on the shelf, kept honest
+      by a ledger that can't be fudged and a parent who approves every penny.</p>
+    <ul class="grid">
+      <li><b>Chores that pay</b><span>A kid ticks it off, a parent approves, the money lands — and
+        the streak keeps going.</span></li>
+      <li><b>Allowance on a schedule</b><span>Set it once. It arrives every week even if nobody
+        opens the app.</span></li>
+      <li><b>Goals worth saving for</b><span>Kids split their allowance toward the thing they
+        actually want, and watch it fill.</span></li>
+      <li><b>Rewards that aren't money</b><span>A day out for a month of chores — together, or
+        each on their own.</span></li>
+      <li><b>Both parents, in step</b><span>Private iCloud sync. Approve on your phone, and it's
+        already done on theirs.</span></li>
+      <li><b>A device each, or one to share</b><span>Hand a kid a phone and it opens to their
+        screen and nowhere else. The family iPad asks who's here.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Privacy, honestly</h2>
+    <div class="privacy">
+      <p><strong>Pig Pal collects nothing.</strong> There's no Pig Pal account, no Pig Pal server,
+        and no analytics or advertising code anywhere in the app.</p>
+      <p>Your family's data stays on your devices. Turn on sync and it goes to <em>your</em> iCloud,
+        where we can't reach it — not to us.</p>
+      <p><a href="privacy.html">Read the full policy</a> — it's one short page.</p>
+    </div>
+  </section>
 
   <footer>
-    <a href="privacy.html">Privacy</a><a href="mailto:CONTACT@EXAMPLE.COM">Support</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="mailto:CONTACT@EXAMPLE.COM">Support</a>
+    <span class="spacer"></span>
     <span>© 2026 Pig Pal</span>
   </footer>
-</main>
+
+</div>
 </body>
 </html>
