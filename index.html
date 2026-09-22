@@ -81,12 +81,23 @@
   .clarify { color:var(--ink3); font-size:.95rem; margin:-12px auto 26px; max-width:30rem; }
 
   /* Shots */
-  .shots { display:grid; gap:26px; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));
+  .shots { display:grid; gap:24px; grid-template-columns:1fr 1fr 2.8fr;
            margin:56px 0 8px; align-items:start; }
   .shots figure { margin:0; text-align:center; }
   .shots img { width:100%; max-width:310px; height:auto; border-radius:26px;
                box-shadow:0 18px 50px rgba(0,0,0,.14); }
   .shots figcaption { color:var(--ink3); font-size:.92rem; margin-top:12px; }
+  /* The iPad is landscape, so it earns more width than the two phones next to it. */
+  .shots .wide img { max-width:none; border-radius:20px; }
+  @media (max-width:860px) {
+    .shots { grid-template-columns:1fr 1fr; }
+    .shots .wide { grid-column:1 / -1; }
+    .shots .wide img { max-width:620px; }
+  }
+  @media (max-width:520px) {
+    .shots { grid-template-columns:1fr; }
+    .shots .wide { grid-column:auto; }
+  }
 
   /* Features */
   section { padding:64px 0; border-top:1px solid var(--line); margin-top:64px; }
@@ -157,8 +168,9 @@
       <img src="assets/shot-parent.png" alt="The parent overview in Pig Pal showing three children with balances and quick plus and minus buttons.">
       <figcaption>What a parent sees: everyone at a glance, approvals waiting.</figcaption>
     </figure>
-    <figure>
-      <img src="assets/shot-gate.png" alt="The Pig Pal family picker asking Who's here? with a tile for each child.">
+    <figure class="wide">
+      <img src="assets/shot-gate-ipad.png" width="1240" height="930"
+        alt="Pig Pal on an iPad held landscape, asking Who's here? with a round tile for Maya, Liam and Olive, and a locked Parent button below.">
       <figcaption>On the family iPad, everyone taps their own face.</figcaption>
     </figure>
   </div>
