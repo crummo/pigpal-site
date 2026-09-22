@@ -109,6 +109,13 @@
   ul.grid b { display:block; color:var(--ink); margin-bottom:4px; font-size:1.05rem; }
   ul.grid span { color:var(--ink2); font-size:.97rem; }
 
+  /* Feature details — crops from the real screens, full width so the UI stays legible. */
+  .details { margin-top:48px; display:grid; gap:40px; }
+  .detail h3 { font-size:1.2rem; letter-spacing:-.01em; margin:0 0 6px; }
+  .detail p { color:var(--ink2); margin:0 0 16px; max-width:40rem; font-size:.99rem; }
+  .detail img { width:100%; max-width:44rem; height:auto; display:block; border-radius:16px;
+                box-shadow:0 10px 30px rgba(0,0,0,.10); }
+
   /* Rewards showcase */
   .showcase { display:grid; gap:30px; grid-template-columns:1fr 1fr; align-items:center;
               margin-top:40px; background:var(--card); border:1px solid var(--line);
@@ -194,6 +201,31 @@
         screen and nowhere else. The family iPad asks who's here.</span></li>
     </ul>
 
+    <div class="details">
+      <div class="detail">
+        <h3>A target, and a bar that fills</h3>
+        <p>A kid picks something worth saving for and puts money toward it. The bar moves as the
+          balance does, so the waiting has a shape you can point at.</p>
+        <img src="assets/detail-goal.png" width="1234" height="266"
+          alt="A savings goal in Pig Pal: New scooter, $16.00 of $23.00, a progress bar filled to 69 percent.">
+      </div>
+      <div class="detail">
+        <h3>Today's list, with a price on it</h3>
+        <p>Every chore carries what it pays and how often it comes round. Tick one off and it's
+          done — unless it's marked <em>approval</em>, which holds it until a parent looks.</p>
+        <img src="assets/detail-chores.png" width="1234" height="579"
+          alt="A child's chore list in Pig Pal: Clear dinner dishes $2.00 daily, Finish homework $2.00 daily needing approval, Tidy whole room $4.00 weekly needing approval, each with a circle to tick.">
+      </div>
+      <div class="detail">
+        <h3>Nothing moves until you say so</h3>
+        <p>Ticked chores land in <em>Waiting for you</em> on the parent's phone. One tap pays it,
+          the other sends it back. Allowance is the one exception — pick an amount and a day and
+          it arrives on its own.</p>
+        <img src="assets/detail-approve.png" width="1234" height="351"
+          alt="The parent approval queue in Pig Pal, headed Waiting for you: Make bed, $1.00, daily, with a cross and a tick button.">
+      </div>
+    </div>
+
     <div class="showcase">
       <img src="assets/shot-rewards.png" alt="The rewards screen in Pig Pal. A day at Six Flags shows 19 of 60 chores done between everyone. Pizza and a film tracks Maya, Liam and Olive separately. Choose Friday dinner is earned.">
       <div>
@@ -232,7 +264,7 @@
   </section>
 
   <footer>
-    <a href="privacy">Privacy</a>
+    <a href="privacy">Privacy policy</a>
     <a href="terms">Terms</a>
     <a href="support">Support</a>
     <span class="spacer"></span>
