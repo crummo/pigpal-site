@@ -34,8 +34,8 @@ Screenshots live in `assets/` and are regenerated from the simulator, not mocked
 >
 > **Voice.** Warm, plain, specific. Short sentences. Concrete nouns — "a kid ticks it off, a
 > parent approves, the money lands" rather than "seamless family financial empowerment". Never
-> use: seamless, empower, revolutionise, gamify, journey, solution. British or American spelling
-> is fine as long as it's consistent. No exclamation marks except in the app's own UI copy.
+> use: seamless, empower, revolutionize, gamify, journey, solution. American spelling and US
+> date format throughout, to match the app. No exclamation marks except in the app's own UI copy.
 >
 > **Look.** Soft pink, rounded, friendly, generous whitespace — the app's own palette. Background
 > `#fdf0f2`, cards `#fff7f8`, ink `#2b1b20`, accent pink `#e0688c`, darker pink for links
@@ -64,7 +64,7 @@ Screenshots live in `assets/` and are regenerated from the simulator, not mocked
 > the social preview image.
 >
 > **Accessibility:** real alt text describing what each screenshot shows, contrast of at least
-> 4.5:1 for body text in both colour schemes, and a layout that works at 375px wide with no
+> 4.5:1 for body text in both color schemes, and a layout that works at 375px wide with no
 > horizontal scrolling.
 
 ---
