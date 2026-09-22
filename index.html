@@ -110,22 +110,6 @@
   .showcase p:last-child { margin:0; }
   @media (max-width:720px) { .showcase { grid-template-columns:1fr; padding:24px; } }
 
-  /* Support */
-  .contact { background:var(--card); border:1px solid var(--line); border-radius:22px;
-             padding:26px 30px; display:flex; flex-wrap:wrap; align-items:center; gap:20px; }
-  .contact div { flex:1 1 17rem; }
-  .contact p { margin:0; color:var(--ink2); font-size:.99rem; }
-  .contact .cta { flex:none; }
-  .faq { margin-top:14px; display:grid; gap:12px; }
-  .faq details { background:var(--card); border:1px solid var(--line); border-radius:18px;
-                 padding:0 22px; }
-  .faq summary { cursor:pointer; list-style:none; padding:16px 0; font-weight:600;
-                 display:flex; align-items:center; justify-content:space-between; gap:14px; }
-  .faq summary::-webkit-details-marker { display:none; }
-  .faq summary::after { content:"+"; color:var(--pink); font-size:1.35rem; line-height:1; flex:none; }
-  .faq details[open] summary::after { content:"\2013"; }
-  .faq p { color:var(--ink2); margin:0 0 16px; font-size:.97rem; }
-
   .privacy { background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px 30px; }
   .privacy p { color:var(--ink2); margin:0 0 10px; }
   .privacy p:last-child { margin:0; }
@@ -137,62 +121,6 @@
   footer a:hover { color:var(--pink-dark); }
   footer .spacer { flex:1; }
 </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Lost your data?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Pig Pal keeps fourteen daily backups on each device. Family > Settings > Data & privacy > Restore a daily copy."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Forgotten the parent PIN?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Tap Forgot PIN? at the gate and use Face ID or your device passcode. On a kid's own device there's no shortcut by design - change it from a parent's phone and it syncs."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "A kid forgotten their passcode?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You don't need the old one. Family > Manage > tap the kid > Passcode > Change, or Clear to drop it altogether."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Managing a subscription",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Settings > your name > Subscriptions on your device. We can't see or change it from here - Apple handles billing."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is there an Android or web version?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Pig Pal is an iPhone and iPad app, and that's the whole list."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you see our family's data?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. There's no Pig Pal account and no Pig Pal server. Everything stays on your devices, and if you turn on sync it goes to your own iCloud, where we can't reach it."
-      }
-    }
-  ]
-}
-</script>
 </head>
 <body>
 <nav class="nav">
@@ -202,7 +130,7 @@
       <li><a href="#features">How it works</a></li>
       <li><a href="#money">Not a bank</a></li>
       <li><a href="#privacy">Privacy</a></li>
-      <li><a href="#support">Support</a></li>
+      <li><a href="support">Support</a></li>
     </ul>
   </div>
 </nav>
@@ -267,54 +195,6 @@
     </div>
   </section>
 
-  <section id="support">
-    <h2>Support</h2>
-    <p class="lede">Something broken, something confusing, or an idea? Write to us — there's no
-      ticket system and no account to log into.</p>
-
-    <div class="contact">
-      <div>
-        <p>You'll get a reply from the person who wrote the app, usually within a couple of
-          days.</p>
-      </div>
-      <a class="cta" href="mailto:support@pigpal.app">support@pigpal.app</a>
-    </div>
-
-    <div class="faq">
-      <details>
-        <summary>Lost your data?</summary>
-        <p>Pig Pal keeps fourteen daily backups on each device. Family &#9656; Settings &#9656;
-          Data &amp; privacy &#9656; Restore a daily copy.</p>
-      </details>
-      <details>
-        <summary>Forgotten the parent PIN?</summary>
-        <p>That's the grown-up lock. Tap Forgot PIN? at the gate and use Face ID or your device
-          passcode. On a kid's own device there's no shortcut by design — change it from a
-          parent's phone and it syncs.</p>
-      </details>
-      <details>
-        <summary>A kid forgotten their passcode?</summary>
-        <p>You don't need the old one. Family &#9656; Manage &#9656; tap the kid &#9656; Passcode
-          &#9656; Change, or Clear to drop it altogether.</p>
-      </details>
-      <details>
-        <summary>Managing a subscription</summary>
-        <p>Settings &#9656; your name &#9656; Subscriptions on your device. We can't see or change
-          it from here — Apple handles billing.</p>
-      </details>
-      <details>
-        <summary>Is there an Android or web version?</summary>
-        <p>No. Pig Pal is an iPhone and iPad app, and that's the whole list.</p>
-      </details>
-      <details>
-        <summary>Can you see our family's data?</summary>
-        <p>No. There's no Pig Pal account and no Pig Pal server. Everything stays on your devices,
-          and if you turn on sync it goes to your own iCloud, where we can't reach it.
-          <a href="privacy">Read the full policy</a>.</p>
-      </details>
-    </div>
-  </section>
-
   <section id="money">
     <h2>Not a bank</h2>
     <div class="privacy">
@@ -342,7 +222,7 @@
   <footer>
     <a href="privacy">Privacy</a>
     <a href="terms">Terms</a>
-    <a href="#support">Support</a>
+    <a href="support">Support</a>
     <span class="spacer"></span>
     <span>© 2026 Pig Pal</span>
   </footer>
