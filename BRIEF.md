@@ -75,8 +75,10 @@ They come from the headless preview harness on the Pro Max simulator (the App St
 so the same captures work for the store listing:
 
 **The children in the fixtures are generated, not photographed.** Keep it that way — never put a
-real child's face on the site or in the store listing. The site says so under the shot row
-("Screenshots show sample data"), so if the fixtures ever change, that line has to stay true.
+real child's face on the site or in the store listing. The site says so under the shot row, and
+says it reason-first, because "we generated these" next to three app screenshots can read as
+"there is AI in this app" — which there isn't. If the fixtures ever change, that line has to stay
+true.
 
 A capture taken with the simulator rotated to landscape comes back in the portrait pixel frame —
 `simctl io screenshot` ignores the rotation. Fix it afterwards with `sips -r 270`.
