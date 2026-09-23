@@ -74,6 +74,13 @@ Screenshots live in `assets/` and are regenerated from the simulator, not mocked
 They come from the headless preview harness on the Pro Max simulator (the App Store's 6.9" size),
 so the same captures work for the store listing:
 
+**The children in the fixtures are generated, not photographed.** Keep it that way — never put a
+real child's face on the site or in the store listing. The site says so under the shot row
+("Screenshots show sample data"), so if the fixtures ever change, that line has to stay true.
+
+A capture taken with the simulator rotated to landscape comes back in the portrait pixel frame —
+`simctl io screenshot` ignores the rotation. Fix it afterwards with `sips -r 270`.
+
 ```sh
 PM=6F7EF7BA-86BA-47F7-A11D-35B51132B2E4
 SIMCTL_CHILD_PREVIEW_SCREEN=kidview SIMCTL_CHILD_PREVIEW_KID=k_maya \
