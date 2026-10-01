@@ -74,7 +74,17 @@
          font-weight:600; padding:14px 30px; border-radius:999px;
          box-shadow:0 8px 24px rgba(224,104,140,.35); }
   .cta.ghost { background:transparent; color:var(--ink2); box-shadow:none; font-weight:500; }
-  .soon { color:var(--ink3); font-size:.95rem; margin-top:14px; }
+  .actions { display:flex; gap:14px; justify-content:center; align-items:center; flex-wrap:wrap; }
+  /* Placeholder until launch. Deliberately not Apple's artwork: the official badge may only
+     link to a live listing. Same black, same rough proportions, so the swap won't shift layout. */
+  .store-badge { display:inline-flex; flex-direction:column; justify-content:center;
+                 height:55px; padding:0 22px; border-radius:12px; background:#000; color:#fff;
+                 border:1px solid #000; text-align:left; line-height:1.15; cursor:default; }
+  .store-badge small { font-size:.7rem; opacity:.8; }
+  .store-badge strong { font-size:1.15rem; font-weight:600; letter-spacing:-.01em; }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) { .store-badge { border-color:#a6a6a6; } }
+  }
   /* Said in the hero, not only in the section near the bottom. For most people the site is the
      first thing they ever see of Pig Pal, and three screenshots of dollar balances will leave an
      impression whether or not they scroll far enough to find the correction. */
@@ -193,8 +203,15 @@
       For iPhone and iPad.</p>
     <p class="clarify">A tracker, not a bank — <a href="#money">parents hand over the real
       money</a>.</p>
-    <a class="cta" href="#features">See how it works</a>
-    <p class="soon">Coming to the App Store.</p>
+    <div class="actions">
+      <a class="cta" href="#features">See how it works</a>
+      <!-- LAUNCH: replace this div with Apple's official "Download on the App Store" badge
+           (developer.apple.com/app-store/marketing/guidelines — use the artwork unmodified),
+           wrapped in <a href="https://apps.apple.com/app/id…">. -->
+      <div class="store-badge" role="img" aria-label="Coming soon to the App Store">
+        <small>Coming soon to the</small><strong>App Store</strong>
+      </div>
+    </div>
   </header>
 
   <div class="shots">
