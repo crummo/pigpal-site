@@ -9,7 +9,7 @@
 <link rel="icon" href="assets/icon.png">
 <link rel="apple-touch-icon" href="assets/icon-180.png">
 <meta property="og:title" content="Pig Pal — the piggy bank, all grown up">
-<meta property="og:description" content="Chores, allowance and savings goals for families. One happy little app for iPhone and iPad.">
+<meta property="og:description" content="Chores, allowance and savings goals for families. One happy little app for iPhone.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://pigpal.app/">
 <meta property="og:image" content="https://pigpal.app/assets/shot-kid.png">
@@ -91,7 +91,7 @@
   .clarify { color:var(--ink3); font-size:.95rem; margin:-12px auto 26px; max-width:30rem; }
 
   /* Shots */
-  .shots { display:grid; gap:24px; grid-template-columns:1fr 1fr 2.8fr;
+  .shots { display:grid; gap:24px; grid-template-columns:repeat(3,1fr);
            margin:56px 0 8px; align-items:start; }
   .shots figure { margin:0; text-align:center; }
   .shots img { width:100%; max-width:310px; height:auto; border-radius:26px;
@@ -99,16 +99,8 @@
   .shots figcaption { color:var(--ink3); font-size:.92rem; margin-top:12px; }
   .shots-note { color:var(--ink3); font-size:.88rem; text-align:center; margin:22px auto 0;
                 max-width:34rem; }
-  /* The iPad is landscape, so it earns more width than the two phones next to it. */
-  .shots .wide img { max-width:none; border-radius:20px; }
-  @media (max-width:860px) {
-    .shots { grid-template-columns:1fr 1fr; }
-    .shots .wide { grid-column:1 / -1; }
-    .shots .wide img { max-width:620px; }
-  }
-  @media (max-width:520px) {
+  @media (max-width:560px) {
     .shots { grid-template-columns:1fr; }
-    .shots .wide { grid-column:auto; }
   }
 
   /* Features */
@@ -200,7 +192,7 @@
     <img class="mark" src="assets/icon.png" alt="The Pig Pal app icon">
     <h1>The piggy bank,<br>all grown up.</h1>
     <p class="tag">Chores, allowance, and goals — in one happy little app.<br>
-      For iPhone and iPad.</p>
+      For iPhone.</p>
     <p class="clarify">A tracker, not a bank — <a href="#money">parents hand over the real
       money</a>.</p>
     <div class="actions">
@@ -223,10 +215,9 @@
       <img src="assets/shot-parent.png" alt="The parent overview in Pig Pal: three requests waiting at the top — Finish homework for Wren, a $4.00 sticker book Theo wants to buy, Make bed for Finn — above cards for Finn, Theo and Wren with their photos, balances and quick plus and minus buttons.">
       <figcaption>What a parent sees: everyone at a glance, approvals waiting.</figcaption>
     </figure>
-    <figure class="wide">
-      <img src="assets/shot-gate-ipad.png" width="1240" height="930"
-        alt="Pig Pal on an iPad held landscape, asking Who's here? with a photo tile for Jun, Mina, Kai, Ren and Aiko, and a locked Parent button below.">
-      <figcaption>On the family iPad, everyone taps their own face.</figcaption>
+    <figure>
+      <img src="assets/shot-money.png" alt="A child's My money screen in Pig Pal: Mina, with her photo, a $48.00 balance, buttons to ask to add money and ask to buy something, and a history of chores earned, purchases and money saved.">
+      <figcaption>Kids can ask, too: for something to buy, or money to add.</figcaption>
     </figure>
   </div>
 
@@ -249,7 +240,7 @@
       <li><b>Both parents, in step</b><span>Private iCloud sync. Approve on your phone and it's
         already done on theirs.</span></li>
       <li><b>A device each, or one to share</b><span>Hand a kid a phone and it opens to their
-        screen and nowhere else. The family iPad asks who's here.</span></li>
+        screen and nowhere else. A shared phone asks who's here.</span></li>
     </ul>
 
     <div class="details">

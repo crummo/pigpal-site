@@ -12,7 +12,7 @@ and a screenshot disagree, the screenshot wins and this file is the thing to fix
 
 ## The prompt
 
-> Build a marketing site for **Pig Pal**, an iPhone and iPad app that handles chores, allowance
+> Build a marketing site for **Pig Pal**, an iPhone app that handles chores, allowance
 > and savings goals for a family. Static HTML and CSS, no framework, no build step, no external
 > requests. Four pages: home, support, privacy policy, terms.
 >
@@ -25,12 +25,14 @@ and a screenshot disagree, the screenshot wins and this file is the thing to fix
 > zoo for forty chores between everyone, or pizza and a film for a few chores each. Each kid has
 > a history of what was earned, spent and saved. Everything syncs privately between the family's
 > devices over iCloud. A device can be tagged: a kid's own phone opens straight to their screen
-> and needs the parent PIN to leave it, while the family iPad opens to a "Who's here?" picker
+> and needs the parent PIN to leave it, while a shared phone opens to a "Who's here?" picker
 > with a face for each child.
 >
 > **What it does not do, and must not be implied.** There is no web app, no Android version, no
 > bank connection, no real debit card, no investing, no chores marketplace, no AI. Money in Pig
-> Pal is a ledger of what a parent owes a child, not actual funds. There is no backup or restore
+> Pal is a ledger of what a parent owes a child, not actual funds. Version 1.0 is iPhone only:
+> no iPad version and no wall mode yet — both are coming, and the support FAQ says the iPad one
+> is on the way. Don't show or promise either in the pitch. There is no backup or restore
 > feature and no data export for users yet — sync is not a backup, and the app says so.
 >
 > **Privacy is a selling point and it is literally true.** No account, no server, no analytics,
@@ -57,8 +59,8 @@ and a screenshot disagree, the screenshot wins and this file is the thing to fix
 > **Structure.** A sticky translucent nav on every page (How it works · Not a bank · Privacy ·
 > Support), identical in position on all four. Home: a hero with the app icon, "The piggy bank,
 > all grown up.", a one-line description, a "See how it works" button and an App Store badge;
-> a row of two phone screenshots and one landscape iPad screenshot, with a note under it that
-> the screenshots show sample data; a feature grid of six; three feature details cut from the
+> a row of three phone screenshots (kid's goals, parent overview, kid's money and requests),
+> with a note under it that the screenshots show sample data; a feature grid of six; three feature details cut from the
 > real screens (savings, today's chores, approvals); a rewards showcase; "Not a bank"; "Privacy,
 > honestly"; a footer with privacy policy, terms, support and "© Slow Dust Software". Support
 > carries the contact email and an FAQ with FAQPage structured data.
@@ -81,19 +83,21 @@ and a screenshot disagree, the screenshot wins and this file is the thing to fix
 |---|---|
 | `shot-kid.png` | Kid's Goals screen (Theo). Also the `og:image`. 620px wide. |
 | `shot-parent.png` | Parent overview with requests waiting (Finn, Theo, Wren). 620px wide. |
-| `shot-gate-ipad.png` | "Who's here?" on the iPad, landscape (Jun, Mina, Kai, Ren, Aiko). 1240px wide. |
+| `shot-money.png` | Kid's My money screen: ask to add money, ask to buy, history (Mina). 620px wide. |
 | `shot-rewards.png` | Rewards screen (Finn, Wren). 620px wide. |
 | `detail-goal.png` | Crop: money to spend and a savings goal with auto-save. |
 | `detail-chores.png` | Crop: today's chores, one marked approval. |
 | `detail-approve.png` | Crop: a kid's page on the parent's phone (Kofi) with a request waiting. |
-| `shot-gate.png` | Old portrait iPhone gate. Not used on the site. |
+| `shot-gate.png`, `shot-gate-ipad.png` | Old gate captures. Not used; the iPad one is for when iPad ships. |
 
-Phone shots are resized to 620px wide; crops are cut from the full-resolution captures
+Phone shots are resized to 620px wide and have the Dynamic Island filled with the status-bar
+pink — shown without a device frame, the black pill is the loudest thing on the page. Leave the
+App Store Connect captures as they are. Crops are cut from the full-resolution captures
 (1320×2868) and left at that scale. The captures live in
 `PigPay/incoming/ASC/shots/build50_shots/`, with dark-mode versions in `build50-dark/`.
 
-The site shows one household through the main story (Finn, Theo, Wren), a second family in the
-approvals detail (Kofi), and a third on the iPad. Keep it to a few coherent families rather than
+The site shows one household through most of the story (Finn, Theo, Wren), with Mina and Kofi
+from two other families. Keep it to a few coherent families rather than
 a different family in every screenshot — a lineup reads as staged.
 
 ## Regenerating the screenshots
@@ -105,7 +109,7 @@ AI in this app", which there isn't. If the fixtures change, that line has to sta
 crops for the fixtures are 512×512 head-and-shoulders, in `PigPay/incoming/ASC/faces/`.
 
 Captures come from the app's preview harness on the iPhone 17 Pro Max simulator (the App
-Store's 6.9" size) and the 13-inch iPad Pro. Screen names change between builds — check the
+Store's 6.9" size), and the 13-inch iPad Pro once iPad ships. Screen names change between builds — check the
 harness rather than this file. Cold launches can render black; launch twice and wait.
 
 A capture taken with the simulator rotated to landscape comes back in the portrait pixel frame —
