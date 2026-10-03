@@ -30,7 +30,8 @@ and a screenshot disagree, the screenshot wins and this file is the thing to fix
 >
 > **What it does not do, and must not be implied.** There is no web app, no Android version, no
 > bank connection, no real debit card, no investing, no chores marketplace, no AI. Money in Pig
-> Pal is a ledger of what a parent owes a child, not actual funds. Version 1.0 is iPhone only:
+> Pal is a ledger of what a parent owes a child, not actual funds. Version 1.0 is free, with
+> no purchases or subscriptions. It is also iPhone only:
 > no iPad version and no wall mode yet — both are coming, and the support FAQ says the iPad one
 > is on the way. Don't show or promise either in the pitch. There is no backup or restore
 > feature and no data export for users yet — sync is not a backup, and the app says so.
