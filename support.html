@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Support — Pig Pal</title>
-<meta name="description" content="Help with Pig Pal — the parent PIN, kid passcodes and syncing. Or write to support@pigpal.app and get a reply from the person who wrote the app.">
+<meta name="description" content="Help with Pig Pal — syncing phones, allowance, chores, approvals and the parent PIN. Or write to support@pigpal.app and get a reply from the person who wrote the app.">
 <link rel="canonical" href="https://pigpal.app/support">
 <link rel="icon" href="assets/icon.png">
 <link rel="apple-touch-icon" href="assets/icon-180.png">
@@ -73,8 +73,11 @@
   .faq summary::after { content:"+"; color:var(--accent); font-size:1.35rem; line-height:1; flex:none; }
   .faq details[open] summary::after { content:"\2013"; }
   .faq p { margin:0 0 15px; font-size:.97rem; }
-  .faq ol { margin:0 0 15px; padding-left:22px; }
-  .faq ol li { font-size:.97rem; margin:0 0 6px; }
+  .faq ol, .faq ul { margin:0 0 15px; padding-left:22px; }
+  .faq ol li, .faq ul li { font-size:.97rem; margin:0 0 6px; }
+  .faq-group { font-size:.8rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em;
+               color:var(--ink3); margin:24px 0 0; }
+  .faq-group:first-child { margin-top:0; }
 
   footer { margin-top:56px; color:var(--ink3); font-size:.9rem; }
 </style>
@@ -83,15 +86,27 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"How do I add another phone?","acceptedAnswer":{"@type":"Answer","text":"Every grown-up can have Pig Pal on their own phone, and so can a kid. It syncs privately through iCloud. 1. On the phone that already has your family, open Pig Pal, tap Parent, then Settings, and turn on Sync with iCloud. 2. Tap Invite a family member and choose who it's for. Another grown-up gets the whole family, parent mode included. A kid's own phone opens straight to that kid's screen; set a parent PIN first. 3. Send the invite by Messages, Mail or AirDrop. 4. On the other phone, install Pig Pal and open the invite. If Pig Pal asks you to set up a family, tap Joining someone's family? instead. Each phone needs to be signed in to iCloud with its own Apple Account. To take someone off later: Settings > Family sync > Manage people."}},
-    {"@type":"Question","name":"What syncs between phones?","acceptedAnswer":{"@type":"Answer","text":"The whole family: kids, chores, goals, rewards, allowance settings, every balance and the full history, the parent PIN and the currency. Photos, carefully. Kids' photos sync too, but a photo never replaces one a phone already has. It waits, and that phone chooses Use Family's Photo or keeps its own. What stays on each phone: what it opens to \u2014 shared, a parent's phone, or one kid's \u2014 whether Face ID unlocks parent mode, and its Color mode and Sound settings."}},
-    {"@type":"Question","name":"What if I turn sync off, leave, or remove someone?","acceptedAnswer":{"@type":"Answer","text":"Turning sync off: that phone stops sending and receiving, and keeps everything. The other phones carry on syncing with each other. Turn it back on and it catches up, keeping anything done in between. Leaving a family: the phone stops syncing for good and keeps its data; nothing is taken from anyone else. Leave and erase clears that phone only. Rejoining needs a new invite. Removing someone: whoever started the family does it under Manage people. The removed phone stops syncing but keeps what it has, because Pig Pal can't erase someone else's phone. Stop Sharing removes everyone at once. Erasing a phone: turn sync off first. Erase all data then clears that phone and nothing else."}},
-    {"@type":"Question","name":"Is sync a backup?","acceptedAnswer":{"@type":"Answer","text":"No. A change or a deletion on one phone reaches all of them. Your iPhone's own iCloud backup includes Pig Pal, so restoring the phone from that backup brings Pig Pal back with it."}},
-    {"@type":"Question","name":"Forgotten the parent PIN?","acceptedAnswer":{"@type":"Answer","text":"Tap Forgot PIN? at the gate and use Face ID or your device passcode. On a kid's own device there's no shortcut by design - change it from a parent's phone and it syncs."}},
-    {"@type":"Question","name":"A kid forgotten their passcode?","acceptedAnswer":{"@type":"Answer","text":"You don't need the old one. Parent > Manage > tap the kid > Passcode > Change, or Clear to drop it altogether."}},
-    {"@type":"Question","name":"Is there an Android or web version?","acceptedAnswer":{"@type":"Answer","text":"No. Pig Pal is an iPhone app, and that's the whole list."}},
-    {"@type":"Question","name":"Is there an iPad version?","acceptedAnswer":{"@type":"Answer","text":"Not yet. Pig Pal 1.0 is made for iPhone; an iPad version is on the way."}},
-    {"@type":"Question","name":"Can you see our family's data?","acceptedAnswer":{"@type":"Answer","text":"No. There's no Pig Pal account and no Pig Pal server, so everything stays on your devices. If you turn on sync, it goes through Apple's iCloud and is kept in the iCloud account of whoever turned sync on; only the people they invite can reach it. From there it's covered by Apple's privacy policy, and Slow Dust Software can't reach it."}}
+    {"@type": "Question", "name": "How do I add another phone?", "acceptedAnswer": {"@type": "Answer", "text": "Every grown-up can have Pig Pal on their own phone, and so can a kid. It syncs privately through iCloud: approve a chore on one phone and it's done on the other. 1. On the phone that already has your family, open Pig Pal, tap Parent, then Settings > Family sync, and turn on Sync with iCloud. 2. Tap Invite a family member and choose who it's for. Another grown-up gets the whole family, parent mode included. A kid's own phone opens straight to that kid's screen — set a parent PIN first. 3. Send the invite however you like: Messages, Mail or AirDrop. 4. On the other phone, install Pig Pal and open the invite. Pig Pal asks them to confirm, then brings over the whole family: kids, chores, goals and history. If Pig Pal asks you to set up a family, tap Joining someone's family? instead, so you don't start a second one. Each phone just needs to be signed in to iCloud with its own Apple Account, so nobody shares a password. If the other phone already has a family of its own, it has to leave that one first: Settings > Family sync > Leave this family."}},
+    {"@type": "Question", "name": "How do I give a kid their own phone?", "acceptedAnswer": {"@type": "Answer", "text": "Invite the kid's phone the same way. To set or change who a phone belongs to, enter Parent on that phone and go to Settings > This device, then pick the kid's name. From then on it opens straight to their screen, and the parent PIN is the only way out. On a kid's own phone, Face ID, Touch ID and the phone's passcode belong to the kid, so none of them unlock parent mode there, and Forgot PIN? won't work either. If you forget the PIN, change it from a parent's phone and it syncs over."}},
+    {"@type": "Question", "name": "What does “This device” mean?", "acceptedAnswer": {"@type": "Answer", "text": "Settings > This device decides which screen Pig Pal opens to on that phone: Shared: the “Who's here?” picker, for a phone that gets passed around. Parent: straight to your dashboard. Kids don't use this phone. A kid's name: that kid's screen only."}},
+    {"@type": "Question", "name": "How do I change the currency?", "acceptedAnswer": {"@type": "Answer", "text": "Settings > Currency."}},
+    {"@type": "Question", "name": "How do I add or take away money by hand?", "acceptedAnswer": {"@type": "Answer", "text": "For cash you handed over, a birthday gift or a correction: in Parent, use the − and + buttons on the kid's card in Overview. Or tap the kid and use Adjust money. It shows up in their history like everything else."}},
+    {"@type": "Question", "name": "How do I change the allowance or payday?", "acceptedAnswer": {"@type": "Answer", "text": "In Parent, tap the kid on Overview > Weekly allowance. Set the Amount and the day it Adds every week. Give now pays this week's straight away. Skip next allowance skips one week without turning it off."}},
+    {"@type": "Question", "name": "Can a chore wait for my OK before it pays?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. When you add or edit a chore, switch on Needs a parent's OK. The kid can tick it off, but the money only lands when you approve it. Chores without it pay as soon as they're ticked."}},
+    {"@type": "Question", "name": "Where do I approve chores and requests?", "acceptedAnswer": {"@type": "Answer", "text": "Everything waiting shows on the Waiting for you card at the top of Overview. Tap ✓ to approve or ✕ to decline, or See all to go through everything on one screen. Declined requests don't show in the family activity unless you switch on Settings > Show declined requests."}},
+    {"@type": "Question", "name": "Can kids ask for money, or to buy something?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. On their My money tab, kids can Ask to add money (for cash they were given, say) or Ask to buy something. The request comes to you, and nothing changes until you approve it. To turn asking off for one kid, tap the kid on Overview and switch off Let name ask."}},
+    {"@type": "Question", "name": "How do goals and auto-save work?", "acceptedAnswer": {"@type": "Answer", "text": "Kids add goals on their Goals tab with + New. Auto-save from allowance splits each allowance between their goals and money to spend, for example half into the bike fund. Money in a goal is still theirs, and it comes back out if they need it."}},
+    {"@type": "Question", "name": "What are rewards?", "acceptedAnswer": {"@type": "Answer", "text": "Something you give for effort, like a trip to the park or picking dinner, earned by doing a number of chores or by keeping a streak going. Rewards never touch a kid's money. Add one in Parent > Manage > Rewards > Add."}},
+    {"@type": "Question", "name": "I removed a kid by mistake. Can I get them back?", "acceptedAnswer": {"@type": "Answer", "text": "For 30 days, yes. Removing a kid (Parent > Manage, tap the kid > Remove) moves them to Recently deleted at the bottom of Manage, and you can restore them from there with everything intact. After 30 days they're gone for good."}},
+    {"@type": "Question", "name": "What syncs between phones?", "acceptedAnswer": {"@type": "Answer", "text": "The whole family: kids, chores, goals, rewards, allowance settings, every balance and the full history, the parent PIN and the currency. Photos, carefully. Kids' photos sync too, but a photo never replaces one a phone already has. It waits, and that phone chooses Use Family's Photo or keeps its own. What stays on each phone: what it opens to — shared, a parent's phone, or one kid's — whether Face ID unlocks parent mode, and its Color mode and Sound settings."}},
+    {"@type": "Question", "name": "What if I turn sync off, leave, or remove someone?", "acceptedAnswer": {"@type": "Answer", "text": "Turning sync off (Settings > Family sync > Sync with iCloud): that phone stops sending and receiving, and keeps everything. The other phones carry on syncing with each other. Turn it back on and it catches up, keeping anything done in between. Leaving a family (Leave this family): the phone stops syncing for good and keeps its data; nothing is taken from anyone else. Leave and erase clears that phone only. Rejoining needs a new invite. Removing someone: whoever started the family does it under Manage people. The removed phone stops syncing but keeps what it has, because Pig Pal can't erase someone else's phone. Stop Sharing removes everyone at once."}},
+    {"@type": "Question", "name": "How do I keep our data safe?", "acceptedAnswer": {"@type": "Answer", "text": "Your iPhone's own iCloud or computer backup includes Pig Pal, so restoring a phone from a backup brings your family back. With Family sync on, every phone in the family also holds a full copy, so a lost or replaced phone can simply be invited back in. Sync isn't a backup by itself, though: a change or a deletion on one phone reaches all of them."}},
+    {"@type": "Question", "name": "How do I erase a phone?", "acceptedAnswer": {"@type": "Answer", "text": "First switch off Settings > Family sync > Sync with iCloud. The erase button stays hidden while sync is on, so an erase can't spread to the rest of the family. Then go to Settings > Data & privacy > Erase all data. It wipes that phone only. The family's copy in iCloud and every other phone are untouched, and turning sync back on brings the family back to that phone."}},
+    {"@type": "Question", "name": "Can you see our family's data?", "acceptedAnswer": {"@type": "Answer", "text": "No. There's no Pig Pal account and no Pig Pal server, so everything stays on your devices. If you turn on sync, it goes through Apple's iCloud and is kept in the iCloud account of whoever turned sync on; only the people they invite can reach it. From there it's covered by Apple's privacy policy, and Slow Dust Software can't reach it. Read ours — it's one short page."}},
+    {"@type": "Question", "name": "Forgotten the parent PIN?", "acceptedAnswer": {"@type": "Answer", "text": "That's the grown-up lock. Tap Forgot PIN? at the gate and use Face ID or your device passcode. On a kid's own phone there's no shortcut by design — change it from a parent's phone and it syncs."}},
+    {"@type": "Question", "name": "A kid forgotten their passcode?", "acceptedAnswer": {"@type": "Answer", "text": "You don't need the old one. Parent > Manage > tap the kid > Passcode > Change, or Clear to drop it altogether."}},
+    {"@type": "Question", "name": "Is there an Android or web version?", "acceptedAnswer": {"@type": "Answer", "text": "No. Pig Pal is an iPhone app, and that's the whole list."}},
+    {"@type": "Question", "name": "Is there an iPad version?", "acceptedAnswer": {"@type": "Answer", "text": "Not yet. Pig Pal 1.0 is made for iPhone; an iPad version is on the way."}}
   ]
 }
 </script>
@@ -122,25 +137,103 @@
 
   <h2>Common questions</h2>
   <div class="faq">
+    <h3 class="faq-group">Setting up</h3>
     <details>
       <summary>How do I add another phone?</summary>
       <p>Every grown-up can have Pig Pal on their own phone, and so can a kid. It syncs privately
         through iCloud: approve a chore on one phone and it's done on the other.</p>
       <ol>
         <li>On the phone that already has your family, open Pig Pal, tap <b>Parent</b>, then
-          <b>Settings</b>, and turn on <b>Sync with iCloud</b>.</li>
+          <b>Settings &#9656; Family sync</b>, and turn on <b>Sync with iCloud</b>.</li>
         <li>Tap <b>Invite a family member</b> and choose who it's for. Another grown-up gets the
           whole family, parent mode included. A kid's own phone opens straight to that kid's
           screen — set a parent PIN first.</li>
         <li>Send the invite however you like: Messages, Mail or AirDrop.</li>
-        <li>On the other phone, install Pig Pal and open the invite. If Pig Pal asks you to set up
-          a family, tap <b>Joining someone's family?</b> instead, so you don't start a second
-          one.</li>
+        <li>On the other phone, install Pig Pal and open the invite. Pig Pal asks them to confirm,
+          then brings over the whole family: kids, chores, goals and history. If Pig Pal asks you to
+          set up a family, tap <b>Joining someone's family?</b> instead, so you don't start a
+          second one.</li>
       </ol>
       <p>Each phone just needs to be signed in to iCloud with its own Apple Account, so nobody
-        shares a password. To take someone off later: Settings &#9656; Family sync &#9656; Manage
-        people.</p>
+        shares a password. If the other phone already has a family of its own, it has to leave
+        that one first: Settings &#9656; Family sync &#9656; <b>Leave this family</b>.</p>
     </details>
+    <details>
+      <summary>How do I give a kid their own phone?</summary>
+      <p>Invite the kid's phone the same way. To set or change who a phone belongs to, enter Parent
+        on that phone and go to Settings &#9656; <b>This device</b>, then pick the kid's name. From
+        then on it opens straight to their screen, and the parent PIN is the only way out.</p>
+      <p>On a kid's own phone, Face ID, Touch ID and the phone's passcode belong to the kid, so none
+        of them unlock parent mode there, and Forgot PIN? won't work either. If you forget the PIN,
+        change it from a parent's phone and it syncs over.</p>
+    </details>
+    <details>
+      <summary>What does “This device” mean?</summary>
+      <p>Settings &#9656; This device decides which screen Pig Pal opens to on that phone:</p>
+      <ul>
+        <li><b>Shared:</b> the “Who's here?” picker, for a phone that gets passed around.</li>
+        <li><b>Parent:</b> straight to your dashboard. Kids don't use this phone.</li>
+        <li><b>A kid's name:</b> that kid's screen only.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>How do I change the currency?</summary>
+      <p>Settings &#9656; <b>Currency</b>.</p>
+    </details>
+
+    <h3 class="faq-group">Money, chores and goals</h3>
+    <details>
+      <summary>How do I add or take away money by hand?</summary>
+      <p>For cash you handed over, a birthday gift or a correction: in Parent, use the − and +
+        buttons on the kid's card in Overview. Or tap the kid and use <b>Adjust money</b>. It shows
+        up in their history like everything else.</p>
+    </details>
+    <details>
+      <summary>How do I change the allowance or payday?</summary>
+      <p>In Parent, tap the kid on Overview &#9656; <b>Weekly allowance</b>. Set the Amount and the
+        day it Adds every week. <b>Give now</b> pays this week's straight away. <b>Skip next
+        allowance</b> skips one week without turning it off.</p>
+    </details>
+    <details>
+      <summary>Can a chore wait for my OK before it pays?</summary>
+      <p>Yes. When you add or edit a chore, switch on <b>Needs a parent's OK</b>. The kid can tick it
+        off, but the money only lands when you approve it. Chores without it pay as soon as
+        they're ticked.</p>
+    </details>
+    <details>
+      <summary>Where do I approve chores and requests?</summary>
+      <p>Everything waiting shows on the <b>Waiting for you</b> card at the top of Overview. Tap ✓ to
+        approve or ✕ to decline, or <b>See all</b> to go through everything on one screen. Declined
+        requests don't show in the family activity unless you switch on Settings &#9656; <b>Show
+        declined requests</b>.</p>
+    </details>
+    <details>
+      <summary>Can kids ask for money, or to buy something?</summary>
+      <p>Yes. On their My money tab, kids can <b>Ask to add money</b> (for cash they were given, say)
+        or <b>Ask to buy something</b>. The request comes to you, and nothing changes until you
+        approve it. To turn asking off for one kid, tap the kid on Overview and switch off
+        <b>Let <i>name</i> ask</b>.</p>
+    </details>
+    <details>
+      <summary>How do goals and auto-save work?</summary>
+      <p>Kids add goals on their Goals tab with <b>+ New</b>. <b>Auto-save from allowance</b> splits
+        each allowance between their goals and money to spend, for example half into the bike fund.
+        Money in a goal is still theirs, and it comes back out if they need it.</p>
+    </details>
+    <details>
+      <summary>What are rewards?</summary>
+      <p>Something you give for effort, like a trip to the park or picking dinner, earned by doing a
+        number of chores or by keeping a streak going. Rewards never touch a kid's money. Add one in
+        Parent &#9656; Manage &#9656; Rewards &#9656; <b>Add</b>.</p>
+    </details>
+    <details>
+      <summary>I removed a kid by mistake. Can I get them back?</summary>
+      <p>For 30 days, yes. Removing a kid (Parent &#9656; Manage, tap the kid &#9656; <b>Remove</b>)
+        moves them to <b>Recently deleted</b> at the bottom of Manage, and you can restore them from
+        there with everything intact. After 30 days they're gone for good.</p>
+    </details>
+
+    <h3 class="faq-group">Sync and your data</h3>
     <details>
       <summary>What syncs between phones?</summary>
       <p><b>The whole family:</b> kids, chores, goals, rewards, allowance settings, every balance and
@@ -152,42 +245,31 @@
     </details>
     <details>
       <summary>What if I turn sync off, leave, or remove someone?</summary>
-      <p><b>Turning sync off:</b> that phone stops sending and receiving, and keeps everything. The
-        other phones carry on syncing with each other. Turn it back on and it catches up, keeping
-        anything done in between.</p>
-      <p><b>Leaving a family:</b> the phone stops syncing for good and keeps its data; nothing is
-        taken from anyone else. <b>Leave and erase</b> clears that phone only. Rejoining needs a new
-        invite.</p>
+      <p><b>Turning sync off</b> (Settings &#9656; Family sync &#9656; Sync with iCloud): that phone
+        stops sending and receiving, and keeps everything. The other phones carry on syncing with
+        each other. Turn it back on and it catches up, keeping anything done in between.</p>
+      <p><b>Leaving a family</b> (Leave this family): the phone stops syncing for good and keeps its
+        data; nothing is taken from anyone else. <b>Leave and erase</b> clears that phone only.
+        Rejoining needs a new invite.</p>
       <p><b>Removing someone:</b> whoever started the family does it under <b>Manage people</b>. The
         removed phone stops syncing but keeps what it has, because Pig Pal can't erase someone
         else's phone. <b>Stop Sharing</b> removes everyone at once.</p>
-      <p><b>Erasing a phone:</b> turn sync off first. <b>Erase all data</b> then clears that phone
-        and nothing else.</p>
     </details>
     <details>
-      <summary>Is sync a backup?</summary>
-      <p>No. A change or a deletion on one phone reaches all of them. Your iPhone's own iCloud
-        backup includes Pig Pal, so restoring the phone from that backup brings Pig Pal back
-        with it.</p>
+      <summary>How do I keep our data safe?</summary>
+      <p>Your iPhone's own iCloud or computer backup includes Pig Pal, so restoring a phone from a
+        backup brings your family back. With Family sync on, every phone in the family also holds a
+        full copy, so a lost or replaced phone can simply be invited back in.</p>
+      <p>Sync isn't a backup by itself, though: a change or a deletion on one phone reaches all of
+        them.</p>
     </details>
     <details>
-      <summary>Forgotten the parent PIN?</summary>
-      <p>That's the grown-up lock. Tap Forgot PIN? at the gate and use Face ID or your device
-        passcode. On a kid's own device there's no shortcut by design — change it from a parent's
-        phone and it syncs.</p>
-    </details>
-    <details>
-      <summary>A kid forgotten their passcode?</summary>
-      <p>You don't need the old one. Parent &#9656; Manage &#9656; tap the kid &#9656; Passcode
-        &#9656; Change, or Clear to drop it altogether.</p>
-    </details>
-    <details>
-      <summary>Is there an Android or web version?</summary>
-      <p>No. Pig Pal is an iPhone app, and that's the whole list.</p>
-    </details>
-    <details>
-      <summary>Is there an iPad version?</summary>
-      <p>Not yet. Pig Pal 1.0 is made for iPhone; an iPad version is on the way.</p>
+      <summary>How do I erase a phone?</summary>
+      <p>First switch off Settings &#9656; Family sync &#9656; <b>Sync with iCloud</b>. The erase
+        button stays hidden while sync is on, so an erase can't spread to the rest of the family.
+        Then go to Settings &#9656; Data &amp; privacy &#9656; <b>Erase all data</b>.</p>
+      <p>It wipes that phone only. The family's copy in iCloud and every other phone are untouched,
+        and turning sync back on brings the family back to that phone.</p>
     </details>
     <details>
       <summary>Can you see our family's data?</summary>
@@ -197,6 +279,29 @@
         there it's covered by <a href="https://www.apple.com/legal/privacy/">Apple's privacy
         policy</a>, and Slow Dust Software can't reach it. <a href="privacy">Read ours</a> —
         it's one short page.</p>
+    </details>
+
+    <h3 class="faq-group">Locks and passcodes</h3>
+    <details>
+      <summary>Forgotten the parent PIN?</summary>
+      <p>That's the grown-up lock. Tap Forgot PIN? at the gate and use Face ID or your device
+        passcode. On a kid's own phone there's no shortcut by design — change it from a parent's
+        phone and it syncs.</p>
+    </details>
+    <details>
+      <summary>A kid forgotten their passcode?</summary>
+      <p>You don't need the old one. Parent &#9656; Manage &#9656; tap the kid &#9656; Passcode
+        &#9656; Change, or Clear to drop it altogether.</p>
+    </details>
+
+    <h3 class="faq-group">Other devices</h3>
+    <details>
+      <summary>Is there an Android or web version?</summary>
+      <p>No. Pig Pal is an iPhone app, and that's the whole list.</p>
+    </details>
+    <details>
+      <summary>Is there an iPad version?</summary>
+      <p>Not yet. Pig Pal 1.0 is made for iPhone; an iPad version is on the way.</p>
     </details>
   </div>
 
