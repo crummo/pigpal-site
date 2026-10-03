@@ -81,6 +81,54 @@ and a screenshot disagree, the screenshot wins and this file is the thing to fix
 
 ---
 
+## How sync works
+
+The support FAQ and the privacy policy both describe sync. Keep them matching this, and check
+the app's `SYNC-SPEC.md` if anything here looks out of date.
+
+**Setting up.** On the phone that already has the family: Parent ▸ Settings ▸ Sync with iCloud,
+then Invite a family member and choose who it's for. A grown-up gets the whole family, parent
+mode included; a kid's own phone opens straight to that kid's screen (set a parent PIN first).
+The invite goes by Messages, Mail or AirDrop. On the other phone, install Pig Pal and open the
+invite; if it offers to set up a family, tap *Joining someone's family?* instead. Each phone is
+signed in to iCloud with its own Apple Account — nobody shares a password.
+
+**Where the family lives.** In the iCloud account of whoever turned sync on and sent the
+invites. Everyone else reads and writes that one copy through Apple's sharing, and it counts
+against the creator's iCloud storage. So for a second parent it is *the family's* iCloud, not
+*their own* — the site says "your family's iCloud" for that reason.
+
+**What syncs.** Kids, chores, goals, rewards, allowance settings, every balance and the full
+history, the parent PIN and the currency. Kids' photos sync too, but never replace a photo a
+phone already has: it waits, and that phone chooses *Use Family's Photo* or keeps its own.
+
+**What stays on each phone.** What the phone opens to (shared, a parent's phone, or one kid's),
+whether Face ID unlocks parent mode, and Color mode and Sound (per-phone since build 50).
+
+**Turning sync off.** That phone stops sending and receiving and keeps everything. The other
+phones carry on with each other. Turning it back on catches up and keeps anything done in
+between.
+
+**Leaving, removing, erasing.** Leaving stops that phone syncing for good; it keeps its data and
+nothing is taken from anyone else. *Leave and erase* clears that phone only. Rejoining needs a
+new invite. Whoever started the family removes people under *Manage people*; a removed phone
+keeps what it has, because Pig Pal can't erase someone else's phone. *Stop Sharing* removes
+everyone at once — it ends access but deletes nothing. To erase a phone, turn sync off first,
+then *Erase all data* clears that phone and nothing else.
+
+**Deleting the iCloud copy.** Only the creator can: turn sync off on their phone, then Settings
+app ▸ their name ▸ iCloud ▸ Manage Account Storage ▸ Pig Pal, and delete its data. Other phones
+then show "no longer shared" and keep their local copies. Turning sync off first matters — a
+phone still syncing may upload its copy again. *This hasn't been tested on real devices yet*;
+the privacy policy states it as an instruction so it holds either way. Doing the same from
+anyone else's account removes only their own data. (A second parent's own iCloud may hold a
+leftover copy made by builds before 40; nothing reads it.)
+
+**Sync is not a backup.** A change or deletion on one phone reaches them all. The iPhone's own
+iCloud backup includes Pig Pal, which is the honest answer to "I lost my data" until Restore
+ships. Deleting the app clears that phone, but an older copy can sit in its iCloud backup until
+the backup is replaced.
+
 ## Assets
 
 | File | What it is |
