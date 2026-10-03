@@ -24,7 +24,10 @@ and a screenshot disagree, the screenshot wins and this file is the thing to fix
 > kept apart from money to spend. Parents can offer rewards that aren't money — a day at the
 > zoo for forty chores between everyone, or pizza and a film for a few chores each. Each kid has
 > a history of what was earned, spent and saved. Everything syncs privately between the family's
-> devices over iCloud. A device can be tagged: a kid's own phone opens straight to their screen
+> devices over iCloud: a parent
+> turns on Sync with iCloud and sends an invite (Messages, Mail or AirDrop) to another grown-up
+> or to a kid's own phone, and each phone uses its own Apple Account. Sync is not a backup; the
+> iPhone's own iCloud backup includes Pig Pal. A device can be tagged: a kid's own phone opens straight to their screen
 > and needs the parent PIN to leave it, while a shared phone opens to a "Who's here?" picker
 > with a face for each child.
 >

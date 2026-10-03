@@ -73,6 +73,8 @@
   .faq summary::after { content:"+"; color:var(--accent); font-size:1.35rem; line-height:1; flex:none; }
   .faq details[open] summary::after { content:"\2013"; }
   .faq p { margin:0 0 15px; font-size:.97rem; }
+  .faq ol { margin:0 0 15px; padding-left:22px; }
+  .faq ol li { font-size:.97rem; margin:0 0 6px; }
 
   footer { margin-top:56px; color:var(--ink3); font-size:.9rem; }
 </style>
@@ -81,6 +83,8 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
+    {"@type":"Question","name":"How do I add another phone?","acceptedAnswer":{"@type":"Answer","text":"Every grown-up can have Pig Pal on their own phone, and so can a kid. It syncs privately through iCloud. 1. On the phone that already has your family, open Pig Pal, tap Parent, then Settings, and turn on Sync with iCloud. 2. Tap Invite a family member and choose who it's for. Another grown-up gets the whole family, parent mode included. A kid's own phone opens straight to that kid's screen; set a parent PIN first. 3. Send the invite by Messages, Mail or AirDrop. 4. On the other phone, install Pig Pal and open the invite. If Pig Pal asks you to set up a family, tap Joining someone's family? instead. Each phone needs to be signed in to iCloud with its own Apple Account. To take someone off later: Settings > Family sync > Manage people."}},
+    {"@type":"Question","name":"Is sync a backup?","acceptedAnswer":{"@type":"Answer","text":"No. A change or a deletion on one phone reaches all of them. Your iPhone's own iCloud backup includes Pig Pal, so restoring the phone from that backup brings Pig Pal back with it."}},
     {"@type":"Question","name":"Forgotten the parent PIN?","acceptedAnswer":{"@type":"Answer","text":"Tap Forgot PIN? at the gate and use Face ID or your device passcode. On a kid's own device there's no shortcut by design - change it from a parent's phone and it syncs."}},
     {"@type":"Question","name":"A kid forgotten their passcode?","acceptedAnswer":{"@type":"Answer","text":"You don't need the old one. Family > Manage > tap the kid > Passcode > Change, or Clear to drop it altogether."}},
     {"@type":"Question","name":"Is there an Android or web version?","acceptedAnswer":{"@type":"Answer","text":"No. Pig Pal is an iPhone app, and that's the whole list."}},
@@ -116,6 +120,31 @@
 
   <h2>Common questions</h2>
   <div class="faq">
+    <details>
+      <summary>How do I add another phone?</summary>
+      <p>Every grown-up can have Pig Pal on their own phone, and so can a kid. It syncs privately
+        through iCloud: approve a chore on one phone and it's done on the other.</p>
+      <ol>
+        <li>On the phone that already has your family, open Pig Pal, tap <b>Parent</b>, then
+          <b>Settings</b>, and turn on <b>Sync with iCloud</b>.</li>
+        <li>Tap <b>Invite a family member</b> and choose who it's for. Another grown-up gets the
+          whole family, parent mode included. A kid's own phone opens straight to that kid's
+          screen — set a parent PIN first.</li>
+        <li>Send the invite however you like: Messages, Mail or AirDrop.</li>
+        <li>On the other phone, install Pig Pal and open the invite. If Pig Pal asks you to set up
+          a family, tap <b>Joining someone's family?</b> instead, so you don't start a second
+          one.</li>
+      </ol>
+      <p>Each phone just needs to be signed in to iCloud with its own Apple Account, so nobody
+        shares a password. To take someone off later: Settings &#9656; Family sync &#9656; Manage
+        people.</p>
+    </details>
+    <details>
+      <summary>Is sync a backup?</summary>
+      <p>No. A change or a deletion on one phone reaches all of them. Your iPhone's own iCloud
+        backup includes Pig Pal, so restoring the phone from that backup brings Pig Pal back
+        with it.</p>
+    </details>
     <details>
       <summary>Forgotten the parent PIN?</summary>
       <p>That's the grown-up lock. Tap Forgot PIN? at the gate and use Face ID or your device
