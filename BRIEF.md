@@ -1,7 +1,7 @@
 # Website brief
 
 The site in this folder is hand-written static HTML, served by Cloudflare Pages at `pigpal.app`.
-If it is ever redesigned — by a designer, by a site builder, by Claude — hand over the prompt
+If it is ever redesigned — by a designer or with a site builder — hand over the prompt
 below rather than describing the app from memory. A generated site that invents features is
 worse than no site.
 
