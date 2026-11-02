@@ -6,8 +6,8 @@ below rather than describing the app from memory. A generated site that invents 
 worse than no site.
 
 **The app is the source of truth.** When this file, a screenshot and the app disagree, the app
-wins. The site's screenshots are from build 50, before parent mode lost its tab bar (build 60), so
-the parent shots are due for a recapture; see "Regenerating the screenshots".
+wins. The parent home screen (`shot-parent.png`) is from build 62; the rest are from build 50 and
+show screens that haven't changed in ways the site depends on.
 
 **Write for parents.** Parents install, run and pay for Pig Pal; kids use their own screen inside
 it. Address the site to the parent ("your kids", "your family"), never to children. Apple's App
@@ -154,7 +154,7 @@ the backup is replaced.
 | File | What it is |
 |---|---|
 | `shot-kid.png` | Kid's Goals screen (Theo). Also the `og:image`. 620px wide. |
-| `shot-parent.png` | Parent overview with requests waiting (Finn, Theo, Wren). 620px wide. |
+| `shot-parent.png` | The Family screen, build 62 (Finn, Theo, Wren, Mina), requests waiting below. 620px wide. |
 | `shot-money.png` | Kid's My money screen: ask to add money, ask to buy, history (Mina). 620px wide. |
 | `detail-rewards.png` | Crop: the three reward cards (Finn, Wren), status bar cut off. 620px wide. |
 | `detail-goal.png` | Crop: money to spend and a savings goal with auto-save. |
@@ -182,8 +182,8 @@ crops for the fixtures are 512×512 head-and-shoulders, in `PigPay/incoming/ASC/
 
 Captures come from the app's preview harness on the iPhone 17 Pro Max simulator (the App
 Store's 6.9" size), and the 13-inch iPad Pro once iPad ships. Screen names change between builds — check the
-harness rather than this file. Recapture the parent shots (`shot-parent.png`, `detail-approve.png`)
-from build 60 or later so they show the Family screen rather than the old tab bar. Cold launches can render black; launch twice and wait.
+harness rather than this file. `shot-parent.png` is from build 62; the other shots are still
+build 50. Build 62 captures are in `PigPay/incoming/website/2026-11-02 build 62/`. Cold launches can render black; launch twice and wait.
 
 A capture taken with the simulator rotated to landscape comes back in the portrait pixel frame —
 `simctl io screenshot` ignores the rotation. Fix it afterwards with `sips -r 270`.
