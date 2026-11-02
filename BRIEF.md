@@ -5,8 +5,14 @@ If it is ever redesigned — by a designer or with a site builder — hand over 
 below rather than describing the app from memory. A generated site that invents features is
 worse than no site.
 
-**The screenshots are the source of truth.** They come from the current build, so when this file
-and a screenshot disagree, the screenshot wins and this file is the thing to fix.
+**The app is the source of truth.** When this file, a screenshot and the app disagree, the app
+wins. The site's screenshots are from build 50, before parent mode lost its tab bar (build 60), so
+the parent shots are due for a recapture; see "Regenerating the screenshots".
+
+**Write for parents.** Parents install, run and pay for Pig Pal; kids use their own screen inside
+it. Address the site to the parent ("your kids", "your family"), never to children. Apple's App
+Review Guidelines (5.1.4) don't let an app outside the Kids category present children as its
+main audience, and the site has to match the App Store listing.
 
 ---
 
@@ -33,8 +39,8 @@ and a screenshot disagree, the screenshot wins and this file is the thing to fix
 >
 > **What it does not do, and must not be implied.** There is no web app, no Android version, no
 > bank connection, no real debit card, no investing, no chores marketplace, no AI. Money in Pig
-> Pal is a ledger of what a parent owes a child, not actual funds. Version 1.0 is free, with
-> no purchases or subscriptions. It is also iPhone only:
+> Pal is a ledger of what a parent owes a child, not actual funds. Pig Pal is free, with no
+> purchases or subscriptions yet; don't mention plans, prices or a trial until they launch. It is also iPhone only:
 > no iPad version and no wall mode yet — both are coming, and the support FAQ says the iPad one
 > is on the way. Don't show or promise either in the pitch. There is no backup or restore
 > feature and no data export for users yet — sync is not a backup, and the app says so.
@@ -81,12 +87,26 @@ and a screenshot disagree, the screenshot wins and this file is the thing to fix
 
 ---
 
+## Finding your way around the app
+
+The support FAQ names screens and buttons exactly as the app does. As of build 62:
+
+- **Parent mode has no tab bar** (since build 60). Its home screen is titled **Family**: the
+  kids' cards with − and + buttons, the **Waiting for you** card at the top, a **Family
+  activity** row that opens the full list, and a **Manage** row. Never say "Overview".
+- **Settings** is the gear at the top left of the Family screen.
+- **Approvals can be undone.** After ✓ or ✕, an **Undo** bar appears briefly.
+- **Out-of-date phones.** A phone on an older version than the family stops syncing and shows
+  **Pig Pal needs an update** at the top of the screen, with an **Update** button (build 62).
+  Nothing is lost; it catches up once updated.
+- **Don't mention larger-text support yet.** It's coming in a later version.
+
 ## How sync works
 
 The support FAQ and the privacy policy both describe sync. Keep them matching this, and check
 the app's `SYNC-SPEC.md` if anything here looks out of date.
 
-**Setting up.** On the phone that already has the family: Parent ▸ Settings ▸ Sync with iCloud,
+**Setting up.** On the phone that already has the family: Parent ▸ the gear (Settings) ▸ Family sync ▸ Sync with iCloud,
 then Invite a family member and choose who it's for. A grown-up gets the whole family, parent
 mode included; a kid's own phone opens straight to that kid's screen (set a parent PIN first).
 The invite goes by Messages, Mail or AirDrop. On the other phone, install Pig Pal and open the
@@ -103,7 +123,7 @@ history, the parent PIN and the currency. Kids' photos sync too, but never repla
 phone already has: it waits, and that phone chooses *Use Family's Photo* or keeps its own.
 
 **What stays on each phone.** What the phone opens to (shared, a parent's phone, or one kid's),
-whether Face ID unlocks parent mode, and Color mode and Sound (per-phone since build 50).
+whether Face ID unlocks parent mode, and Color mode and Sound effects (per-phone since build 50).
 
 **Turning sync off.** That phone stops sending and receiving and keeps everything. The other
 phones carry on with each other. Turning it back on catches up and keeps anything done in
@@ -162,7 +182,8 @@ crops for the fixtures are 512×512 head-and-shoulders, in `PigPay/incoming/ASC/
 
 Captures come from the app's preview harness on the iPhone 17 Pro Max simulator (the App
 Store's 6.9" size), and the 13-inch iPad Pro once iPad ships. Screen names change between builds — check the
-harness rather than this file. Cold launches can render black; launch twice and wait.
+harness rather than this file. Recapture the parent shots (`shot-parent.png`, `detail-approve.png`)
+from build 60 or later so they show the Family screen rather than the old tab bar. Cold launches can render black; launch twice and wait.
 
 A capture taken with the simulator rotated to landscape comes back in the portrait pixel frame —
 `simctl io screenshot` ignores the rotation. Fix it afterwards with `sips -r 270`.
