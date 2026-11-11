@@ -155,13 +155,12 @@ the backup is replaced.
 
 | File | What it is |
 |---|---|
-| `shot-kid.png` | Kid's Goals screen (Theo). Also the `og:image`. 620px wide. |
+| `shot-kid.png` | Kid's Chores screen (Theo). Also the `og:image`. 620px wide. |
 | `shot-parent.png` | The Family screen (Finn, Theo, Wren, Mina), requests waiting below. 620px wide. |
 | `shot-ask.png` | Mina's page on the parent's phone, a request to add birthday money waiting. 620px wide. |
 | `detail-rewards.png` | Crop: the three reward cards (Finn, Wren), status bar cut off. 620px wide. |
-| `detail-goal.png` | Crop: money to spend and a savings goal with auto-save. |
-| `detail-chores.png` | Crop: today's chores, one marked approval. |
-| `detail-approve.png` | Crop: a kid's page on the parent's phone (Kofi) with a request waiting. |
+| `detail-goal.png` | Crop: one savings goal card with auto-save (Theo). |
+| `detail-ask.png` | Crop: the kid's Ask to add money / Ask to buy something buttons (Mina's My money). |
 | `shot-gate.png`, `shot-gate-ipad.png` | Old gate captures. Not used; the iPad one is for when iPad ships. |
 
 Phone shots are resized to 620px wide, with no Dynamic Island: shown without a device frame, the
@@ -170,9 +169,8 @@ screenshots; older captures had it filled with the status-bar pink. Crops are cu
 full-resolution captures (1320×2868) and left at that scale. The captures live in
 `PigPay/incoming/website/2026-11-11 build 66/`.
 
-The site shows one household through most of the story (Finn, Theo, Wren), with Mina and Kofi
-from two other families. Keep it to a few coherent families rather than
-a different family in every screenshot — a lineup reads as staged.
+The site shows one household all the way through: Finn, Theo, Wren and Mina. Keep it that way
+rather than a different family in every screenshot — a lineup reads as staged.
 
 ## Regenerating the screenshots
 
@@ -192,8 +190,7 @@ How the family was staged: hammer menu ▸ **Skip** loads the demo family (Maya,
 with the app stopped, rewrite the `pigpay:v1` blob through `simctl spawn … defaults` — rename to
 Finn, Theo, Wren, add Mina (`k_mina`, a copy of Theo's history), point `photoFilename` at faces
 copied into `Documents/KidPhotos/` — and set `subscriptionTier` to `family` plus
-`pigpay:dev.tierOverride` so nothing shows a lock. Kofi's crop came from a one-kid copy of the
-same blob. Override the status bar first (`simctl status_bar … --time 9:41 --batteryLevel 100`).
+`pigpay:dev.tierOverride` so nothing shows a lock. Override the status bar first (`simctl status_bar … --time 9:41 --batteryLevel 100`).
 The harness never saves, so edits made in it don't stick. After the first launch the simulator
 often renders blank: reboot it before each capture.
 
