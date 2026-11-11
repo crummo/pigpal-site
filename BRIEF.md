@@ -162,6 +162,7 @@ the backup is replaced.
 | `detail-rewards.png` | Crop: the three reward cards (Finn, Wren), status bar cut off. 620px wide. |
 | `detail-goal.png` | Crop: one savings goal card with auto-save (Theo). |
 | `detail-ask.png` | Crop: the kid's Ask to add money / Ask to buy something buttons (Finn's My money). |
+| `detail-approve.png` | Crop: Kofi's page on his parent's phone, a sticker book waiting (a one-kid family, build 66). |
 | `shot-gate.png`, `shot-gate-ipad.png` | Old gate captures. Not used; the iPad one is for when iPad ships. |
 
 Phone shots are resized to 620px wide, with no Dynamic Island: shown without a device frame, the
@@ -171,7 +172,8 @@ full-resolution captures (1320×2868) and left at that scale. The captures live 
 `PigPay/incoming/website/2026-11-11 build 66/`.
 
 The site shows more than one family: Finn, Theo and Wren are one household; Mina, Jun and
-Hana are a second family (only Mina is shown; her siblings appear in the corner switcher). Never put Mina on Finn, Theo and Wren's Family screen. Keep it to
+Hana are a second family (only Mina is shown; her siblings appear in the corner switcher), and
+Kofi is a third, on his own. Never put Mina on Finn, Theo and Wren's Family screen. Keep it to
 a couple of coherent families rather than a different family in every screenshot — a lineup
 reads as staged.
 
