@@ -157,8 +157,8 @@ the backup is replaced.
 | File | What it is |
 |---|---|
 | `shot-kid.png` | Kid's Chores screen (Theo). Also the `og:image`. 620px wide. |
-| `shot-parent.png` | The Family screen on a parent's own phone (Finn, Theo, Wren), one request waiting. 620px wide. |
-| `shot-ask.png` | Finn's page on the parent's phone, a request to add birthday money waiting. 620px wide. |
+| `shot-parent.png` | The Family screen on a parent's own phone (Finn, Theo, Wren), Theo's sticker book waiting. 620px wide. |
+| `shot-ask.png` | Mina's page on her parent's phone (a one-kid family), a request to add birthday money waiting. 620px wide. |
 | `detail-rewards.png` | Crop: the three reward cards (Finn, Wren), status bar cut off. 620px wide. |
 | `detail-goal.png` | Crop: one savings goal card with auto-save (Theo). |
 | `detail-ask.png` | Crop: the kid's Ask to add money / Ask to buy something buttons (Finn's My money). |
@@ -170,8 +170,10 @@ screenshots; older captures had it filled with the status-bar pink. Crops are cu
 full-resolution captures (1320×2868) and left at that scale. The captures live in
 `PigPay/incoming/website/2026-11-11 build 66/`.
 
-The site shows one household all the way through: Finn, Theo and Wren. Keep it that way
-rather than a different family in every screenshot — a lineup reads as staged.
+The site shows more than one family: Finn, Theo and Wren are one household; Mina is a
+separate family with just her. Never put Mina on Finn, Theo and Wren's Family screen. Keep it to
+a couple of coherent families rather than a different family in every screenshot — a lineup
+reads as staged.
 
 ## Regenerating the screenshots
 
@@ -192,8 +194,10 @@ with the app stopped, rewrite the `pigpay:v1` blob through `simctl spawn … def
 Finn, Theo, Wren, point `photoFilename` at faces (`incoming/photos/faces/f2b`, `f2c`, `f2a`)
 copied into `Documents/KidPhotos/` — set `parentOnlyMode` to true so it's a parent's own phone
 (no Exit Parent), and set `subscriptionTier` to `family` plus `pigpay:dev.tierOverride` so
-nothing shows a lock. Keep one request waiting (Finn's birthday money) so the Family screen stays clean.
-The staged blob is saved as `incoming/website/store-3kids-parentdevice.json`. Override the status bar first (`simctl status_bar … --time 9:41 --batteryLevel 100`).
+nothing shows a lock. Keep one request waiting (Theo's sticker book) so the Family screen stays clean.
+Mina's family is a one-kid copy of the same blob (face `f4b`, her birthday-money request, also
+`parentOnlyMode`). The staged blobs are saved as `incoming/website/store-3kids-parentdevice.json`
+and `store-mina-parentdevice.json`. Override the status bar first (`simctl status_bar … --time 9:41 --batteryLevel 100`).
 The harness never saves, so edits made in it don't stick. After the first launch the simulator
 often renders blank: reboot it before each capture.
 
