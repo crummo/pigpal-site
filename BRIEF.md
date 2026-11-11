@@ -89,12 +89,14 @@ main audience, and the site has to match the App Store listing.
 
 ## Finding your way around the app
 
-The support FAQ names screens and buttons exactly as the app does. As of build 62:
+The support FAQ names screens and buttons exactly as the app does. As of build 66:
 
 - **Parent mode has no tab bar** (since build 60). Its home screen is titled **Family**: the
   kids' cards with − and + buttons, the **Waiting for you** card at the top, a **Family
   activity** row that opens the full list, and a **Manage** row. Never say "Overview".
-- **Settings** is the gear at the top left of the Family screen.
+- **Settings** is the gear at the top right of the Family screen, next to **Exit Parent**.
+- **A kid's page** (tap the kid on Family) has **Add** and **Subtract**, the **Allowance** row
+  ("Allowance · $8.00 every Sunday", or "Weekly allowance · Off") and **Let *name* ask**.
 - **Approvals can be undone.** After ✓ or ✕, an **Undo** bar appears briefly.
 - **Out-of-date phones.** A phone on an older version than the family stops syncing and shows
   **Pig Pal needs an update** at the top of the screen, with an **Update** button (build 62).
