@@ -6,8 +6,8 @@ below rather than describing the app from memory. A generated site that invents 
 worse than no site.
 
 **The app is the source of truth.** When this file, a screenshot and the app disagree, the app
-wins. The parent home screen (`shot-parent.png`) is from build 62; the rest are from build 50 and
-show screens that haven't changed in ways the site depends on.
+wins. The phone shots and the goal, chore and approval crops are from build 66 (1.2); the rewards
+crop is still build 50.
 
 **Write for parents.** Parents install, run and pay for Pig Pal; kids use their own screen inside
 it. Address the site to the parent ("your kids", "your family"), never to children. Apple's App
@@ -154,7 +154,7 @@ the backup is replaced.
 | File | What it is |
 |---|---|
 | `shot-kid.png` | Kid's Goals screen (Theo). Also the `og:image`. 620px wide. |
-| `shot-parent.png` | The Family screen, build 62 (Finn, Theo, Wren, Mina), requests waiting below. 620px wide. |
+| `shot-parent.png` | The Family screen (Finn, Theo, Wren, Mina), requests waiting below. 620px wide. |
 | `shot-money.png` | Kid's My money screen: ask to add money, ask to buy, history (Mina). 620px wide. |
 | `detail-rewards.png` | Crop: the three reward cards (Finn, Wren), status bar cut off. 620px wide. |
 | `detail-goal.png` | Crop: money to spend and a savings goal with auto-save. |
@@ -162,11 +162,11 @@ the backup is replaced.
 | `detail-approve.png` | Crop: a kid's page on the parent's phone (Kofi) with a request waiting. |
 | `shot-gate.png`, `shot-gate-ipad.png` | Old gate captures. Not used; the iPad one is for when iPad ships. |
 
-Phone shots are resized to 620px wide and have the Dynamic Island filled with the status-bar
-pink — shown without a device frame, the black pill is the loudest thing on the page. Leave the
-App Store Connect captures as they are. Crops are cut from the full-resolution captures
-(1320×2868) and left at that scale. The captures live in
-`PigPay/incoming/ASC/shots/build50_shots/`, with dark-mode versions in `build50-dark/`.
+Phone shots are resized to 620px wide, with no Dynamic Island: shown without a device frame, the
+black pill is the loudest thing on the page. Current simulators leave it out of `simctl`
+screenshots; older captures had it filled with the status-bar pink. Crops are cut from the
+full-resolution captures (1320×2868) and left at that scale. The captures live in
+`PigPay/incoming/website/2026-11-11 build 66/`.
 
 The site shows one household through most of the story (Finn, Theo, Wren), with Mina and Kofi
 from two other families. Keep it to a few coherent families rather than
@@ -180,10 +180,20 @@ says it reason-first, because "we generated these" next to app screenshots can r
 AI in this app", which there isn't. If the fixtures change, that line has to stay true. Face
 crops for the fixtures are 512×512 head-and-shoulders, in `PigPay/incoming/ASC/faces/`.
 
-Captures come from the app's preview harness on the iPhone 17 Pro Max simulator (the App
-Store's 6.9" size), and the 13-inch iPad Pro once iPad ships. Screen names change between builds — check the
-harness rather than this file. `shot-parent.png` is from build 62; the other shots are still
-build 50. Build 62 captures are in `PigPay/incoming/website/2026-11-02 build 62/`. Cold launches can render black; launch twice and wait.
+Captures come from the app's preview harness (`SIMCTL_CHILD_PREVIEW_SCREEN`, see the app's
+CLAUDE.md) on a 6.9" simulator (iPhone 17 or 18 Pro Max, 1320×2868), and the 13-inch iPad Pro
+once iPad ships. Screen names change between builds — check the harness rather than this file.
+The round from build 66 used `parentview` (Family screen), `parentview` + `PREVIEW_KID` (a kid's
+page), and `kidview` + `PREVIEW_KID_TAB=goals|money`.
+
+How the family was staged: hammer menu ▸ **Skip** loads the demo family (Maya, Liam, Olive). Then,
+with the app stopped, rewrite the `pigpay:v1` blob through `simctl spawn … defaults` — rename to
+Finn, Theo, Wren, add Mina (`k_mina`, a copy of Theo's history), point `photoFilename` at faces
+copied into `Documents/KidPhotos/` — and set `subscriptionTier` to `family` plus
+`pigpay:dev.tierOverride` so nothing shows a lock. Kofi's crop came from a one-kid copy of the
+same blob. Override the status bar first (`simctl status_bar … --time 9:41 --batteryLevel 100`).
+The harness never saves, so edits made in it don't stick. After the first launch the simulator
+often renders blank: reboot it before each capture.
 
 A capture taken with the simulator rotated to landscape comes back in the portrait pixel frame —
 `simctl io screenshot` ignores the rotation. Fix it afterwards with `sips -r 270`.
