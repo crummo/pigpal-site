@@ -94,7 +94,8 @@ The support FAQ names screens and buttons exactly as the app does. As of build 6
 - **Parent mode has no tab bar** (since build 60). Its home screen is titled **Family**: the
   kids' cards with − and + buttons, the **Waiting for you** card at the top, a **Family
   activity** row that opens the full list, and a **Manage** row. Never say "Overview".
-- **Settings** is the gear at the top right of the Family screen, next to **Exit Parent**.
+- **Settings** is the gear at the top right of the Family screen. On a parent's own phone it shares
+  a pill with **Manage** (the people icon); on a shared device it sits next to **Exit Parent**.
 - **A kid's page** (tap the kid on Family) has **Add** and **Subtract**, the **Allowance** row
   ("Allowance · $8.00 every Sunday", or "Weekly allowance · Off") and **Let *name* ask**.
 - **Approvals can be undone.** After ✓ or ✕, an **Undo** bar appears briefly.
@@ -156,11 +157,11 @@ the backup is replaced.
 | File | What it is |
 |---|---|
 | `shot-kid.png` | Kid's Chores screen (Theo). Also the `og:image`. 620px wide. |
-| `shot-parent.png` | The Family screen (Finn, Theo, Wren, Mina), requests waiting below. 620px wide. |
-| `shot-ask.png` | Mina's page on the parent's phone, a request to add birthday money waiting. 620px wide. |
+| `shot-parent.png` | The Family screen on a parent's own phone (Finn, Theo, Wren), one request waiting. 620px wide. |
+| `shot-ask.png` | Finn's page on the parent's phone, a request to add birthday money waiting. 620px wide. |
 | `detail-rewards.png` | Crop: the three reward cards (Finn, Wren), status bar cut off. 620px wide. |
 | `detail-goal.png` | Crop: one savings goal card with auto-save (Theo). |
-| `detail-ask.png` | Crop: the kid's Ask to add money / Ask to buy something buttons (Mina's My money). |
+| `detail-ask.png` | Crop: the kid's Ask to add money / Ask to buy something buttons (Finn's My money). |
 | `shot-gate.png`, `shot-gate-ipad.png` | Old gate captures. Not used; the iPad one is for when iPad ships. |
 
 Phone shots are resized to 620px wide, with no Dynamic Island: shown without a device frame, the
@@ -169,7 +170,7 @@ screenshots; older captures had it filled with the status-bar pink. Crops are cu
 full-resolution captures (1320×2868) and left at that scale. The captures live in
 `PigPay/incoming/website/2026-11-11 build 66/`.
 
-The site shows one household all the way through: Finn, Theo, Wren and Mina. Keep it that way
+The site shows one household all the way through: Finn, Theo and Wren. Keep it that way
 rather than a different family in every screenshot — a lineup reads as staged.
 
 ## Regenerating the screenshots
@@ -188,9 +189,11 @@ page), and `kidview` + `PREVIEW_KID_TAB=goals|money`.
 
 How the family was staged: hammer menu ▸ **Skip** loads the demo family (Maya, Liam, Olive). Then,
 with the app stopped, rewrite the `pigpay:v1` blob through `simctl spawn … defaults` — rename to
-Finn, Theo, Wren, add Mina (`k_mina`, a copy of Theo's history), point `photoFilename` at faces
-copied into `Documents/KidPhotos/` — and set `subscriptionTier` to `family` plus
-`pigpay:dev.tierOverride` so nothing shows a lock. Override the status bar first (`simctl status_bar … --time 9:41 --batteryLevel 100`).
+Finn, Theo, Wren, point `photoFilename` at faces (`incoming/photos/faces/f2b`, `f2c`, `f2a`)
+copied into `Documents/KidPhotos/` — set `parentOnlyMode` to true so it's a parent's own phone
+(no Exit Parent), and set `subscriptionTier` to `family` plus `pigpay:dev.tierOverride` so
+nothing shows a lock. Keep one request waiting (Finn's birthday money) so the Family screen stays clean.
+The staged blob is saved as `incoming/website/store-3kids-parentdevice.json`. Override the status bar first (`simctl status_bar … --time 9:41 --batteryLevel 100`).
 The harness never saves, so edits made in it don't stick. After the first launch the simulator
 often renders blank: reboot it before each capture.
 
