@@ -157,7 +157,7 @@ the backup is replaced.
 |---|---|
 | `shot-kid.png` | Kid's Goals screen (Theo). Also the `og:image`. 620px wide. |
 | `shot-parent.png` | The Family screen (Finn, Theo, Wren, Mina), requests waiting below. 620px wide. |
-| `shot-money.png` | Kid's My money screen: ask to add money, ask to buy, history (Mina). 620px wide. |
+| `shot-ask.png` | Mina's page on the parent's phone, a request to add birthday money waiting. 620px wide. |
 | `detail-rewards.png` | Crop: the three reward cards (Finn, Wren), status bar cut off. 620px wide. |
 | `detail-goal.png` | Crop: money to spend and a savings goal with auto-save. |
 | `detail-chores.png` | Crop: today's chores, one marked approval. |
