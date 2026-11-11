@@ -162,7 +162,7 @@ the backup is replaced.
 | `detail-rewards.png` | Crop: the three reward cards (Finn, Wren), status bar cut off. 620px wide. |
 | `detail-goal.png` | Crop: one savings goal card with auto-save (Theo). |
 | `detail-ask.png` | Crop: the kid's Ask to add money / Ask to buy something buttons (Finn's My money). |
-| `detail-approve.png` | Crop: Kofi's page on his parent's phone, a sticker book waiting (a one-kid family, build 66). |
+| `detail-approve.png` | Crop: Kofi's page on his parent's phone, a Pokémon pack waiting (a one-kid family). Shown smaller (30rem). |
 | `shot-gate.png`, `shot-gate-ipad.png` | Old gate captures. Not used; the iPad one is for when iPad ships. |
 
 Phone shots are resized to 620px wide, with no Dynamic Island: shown without a device frame, the
