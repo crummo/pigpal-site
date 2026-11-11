@@ -199,7 +199,8 @@ copied into `Documents/KidPhotos/` — set `parentOnlyMode` to true so it's a pa
 nothing shows a lock. Keep one request waiting (Theo's sticker book) so the Family screen stays clean.
 Mina's family is a copy of the same blob: Mina (`f4b`) plus Jun (`f4a`) and Hana (`f4e`), nothing
 waiting, also `parentOnlyMode`. The staged blobs are saved as `incoming/website/store-3kids-parentdevice.json`
-and `store-mina-parentdevice.json`. Override the status bar first (`simctl status_bar … --time 9:41 --batteryLevel 100`).
+and `store-mina-parentdevice.json`. Kofi (`f3a`) is a one-kid copy of Theo with a Pokémon pack
+request, also `parentOnlyMode` (`store-kofi-parentdevice.json`). Override the status bar first (`simctl status_bar … --time 9:41 --batteryLevel 100`).
 The harness never saves, so edits made in it don't stick. After the first launch the simulator
 often renders blank: reboot it before each capture.
 
